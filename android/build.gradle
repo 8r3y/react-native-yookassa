@@ -31,7 +31,7 @@ buildscript {
         repositories {
             google()
             jcenter()
-            maven { url "https://jitpack.io" }
+            mavenCentral()
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:3.4.1'
@@ -40,6 +40,7 @@ buildscript {
         repositories {
             google()
             jcenter()
+            mavenCentral()
         }
     }
 }
@@ -62,9 +63,9 @@ android {
 }
 rootProject.allprojects {
     repositories {
+        google()
         jcenter()
         mavenCentral()
-        maven { url 'https://dl.bintray.com/yoomoney/maven' }
     }
 }
 
@@ -79,16 +80,14 @@ repositories {
         // Android JSC is installed from npm
         url "$rootDir/../node_modules/jsc-android/dist"
     }
-    google()
-    jcenter()
-
+    mavenCentral()
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-	implementation 'ru.yoo.sdk.kassa.payments:yookassa-android-sdk:5.0.1' // Модуль ЮКасса
-    implementation "ru.yoo.sdk.auth:auth:1.0.35" // sdk авторизации для платежей из кошелька
+	implementation 'ru.yoomoney.sdk.kassa.payments:yookassa-android-sdk:5.1.4' // Модуль ЮКасса
+    implementation "ru.yoomoney.sdk.auth:auth:1.3.0" // sdk авторизации для платежей из кошелька
     implementation fileTree(dir: "libs", include: ["*.aar"])
 }
 
