@@ -1,15 +1,13 @@
 {
   "name": "@wyndrick/react-native-yookassa",
   "title": "React Native Yookassa",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "React Native module for Yookassa",
   "main": "index.js",
   "files": [
     "README.md",
     "android",
-    "index.js",
-    "ios",
-    "react-native-yookassa.podspec"
+    "index.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
